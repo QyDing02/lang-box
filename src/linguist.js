@@ -49,7 +49,7 @@ export const runLinguist = async (files) => {
           : ""
       )
     ),
-    run(`echo "*.* linguist-detectable" > .gitattributes`),
+    run(`echo "*.* linguist-detectable\n*.csv linguist-vendored" > .gitattributes`),
     run(
       `git config user.name "dummy" && git config user.email "dummy@github.com"`
     ),
